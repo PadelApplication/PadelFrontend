@@ -49,7 +49,7 @@ function CreateEvent() {
                                     id="title"
                                     onChange={handleChange}
                                     value={formData.title}
-                                    className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
+                                    className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full text-black sm:text-sm border-gray-300 rounded-md"
                                 />
                             </div>
                         </div>
@@ -68,7 +68,7 @@ function CreateEvent() {
                                     id="date"
                                     onChange={handleChange}
                                     value={formData.date}
-                                    className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
+                                    className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full text-black sm:text-sm border-gray-300 rounded-md"
                                 />
                             </div>
                         </div>
@@ -87,7 +87,7 @@ function CreateEvent() {
                                     id="time"
                                     onChange={handleChange}
                                     value={formData.time}
-                                    className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
+                                    className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full text-black sm:text-sm border-gray-300 rounded-md"
                                 />
                             </div>
                         </div>
@@ -100,14 +100,16 @@ function CreateEvent() {
                                 Place
                             </label>
                             <div className="mt-1">
-                                <input
-                                    type="text"
+                                <select
                                     name="place"
                                     id="place"
                                     onChange={handleChange}
                                     value={formData.place}
-                                    className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
-                                />
+                                    className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full text-black sm:text-sm border-gray-300 rounded-md"
+                                >
+                                    <option value="">Select a Place</option>
+                                    <option value="padelBerghem">Padelcentrum Berghem</option>
+                                </select>
                             </div>
                         </div>
 
@@ -119,14 +121,21 @@ function CreateEvent() {
                                 Court
                             </label>
                             <div className="mt-1">
-                                <input
-                                    type="text"
+                                <select
                                     name="court"
                                     id="court"
                                     onChange={handleChange}
                                     value={formData.court}
-                                    className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
-                                />
+                                    className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full text-black sm:text-sm border-gray-300 rounded-md"
+                                >
+                                    <option value="">Select a Court</option>
+                                    <option value="Court1">Court 1</option>
+                                    <option value="Court2">Court 2</option>
+                                    <option value="Court3">Court 3</option>
+                                    <option value="Court4">Court 4</option>
+                                    <option value="Court5">Court 5</option>
+                                    <option value="Court6">Court 6</option>
+                                </select>
                             </div>
                         </div>
 
@@ -144,7 +153,7 @@ function CreateEvent() {
                                     id="people"
                                     onChange={handleChange}
                                     value={formData.people}
-                                    className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
+                                    className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full  text-black sm:text-sm border-gray-300 rounded-md"
                                 />
                             </div>
                         </div>
