@@ -27,7 +27,7 @@ const events = [
         people: 0
     },
     {
-        id: 1,
+        id: 4,
         title: "Event 4",
         date: "15-10-2023",
         time: "21:30",
@@ -36,12 +36,12 @@ const events = [
         people: 0
     },
     {
-        id: 1,
-        title: "Event 4",
-        date: "15-10-2023",
+        id: 5,
+        title: "Event 5",
+        date: "17-10-2023",
         time: "21:30",
         place: "Padelcentrum Berghem",
-        court: "Baan 1",
+        court: "Baan 5",
         people: 0
     }
 ];

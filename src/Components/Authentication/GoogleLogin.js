@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import { GoogleLogin } from '@react-oauth/google';
 import jwtDecode from "jwt-decode";
 
@@ -10,6 +10,7 @@ function GoogleLoginButton() {
         let userObject = jwtDecode(credentialResponse.credential)
         setLoggedIn(true);
         setEmail(userObject.email);
+        localStorage.setItem('token', credentialResponse.credential);
     }
 
     const handleLoginError = () => {
@@ -18,6 +19,7 @@ function GoogleLoginButton() {
 
     const handleLogout = () => {
         setLoggedIn(false)
+        localStorage.removeItem('token')
     }
 
     return <div>
