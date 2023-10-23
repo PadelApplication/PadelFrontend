@@ -38,11 +38,11 @@ function EventList({ token }) {
     };
 
     return (
-        <div>
+        <div className="max-w-max">
             <h1 className={"p-12 text-5xl text-cyan-300 font-semibold static"}>
                 Upcoming Padel Events
             </h1>
-            <div className={"flex flex-row"}>
+            <div className={"grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"}>
                 {events.map((event) => (
                     <div className={"m-6"}>
                         <Event
