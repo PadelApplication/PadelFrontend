@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 
 function CreateEvent() {
-    const [formData, setFormData] = useState({
+    const [padelSession, setPadelSession] = useState({
         title: "",
         date: "",
         time: "",
@@ -12,8 +12,8 @@ function CreateEvent() {
 
     const handleChange = (e) => {
         const { name, value } = e.target;
-        setFormData({
-            ...formData,
+        setPadelSession({
+            ...padelSession,
             [name]: value,
         });
     };
@@ -21,18 +21,16 @@ function CreateEvent() {
     const handleSubmit = (e) => {
         e.preventDefault();
         // You can perform actions like sending the data to a server here
-        console.log(formData);
+        console.log(padelSession);
     };
 
     return (
-        <div className="max-w-max min-h-screen bg-gray-100 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
-            <div className="sm:mx-auto sm:w-full sm:max-w-md">
-                <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
-                    Create Event
-                </h2>
-            </div>
+        <div className="max-w-max min-h-screen flex flex-col justify-center">
+            <h1 className="text-5xl text-cyan-300 font-semibold static">
+                Upcoming Padel Events
+            </h1>
 
-            <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
+            <div className="mt-24 sm:mx-auto sm:w-full sm:max-w-md">
                 <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
                     <form onSubmit={handleSubmit} className="space-y-6">
                         <div>
@@ -48,7 +46,7 @@ function CreateEvent() {
                                     name="title"
                                     id="title"
                                     onChange={handleChange}
-                                    value={formData.title}
+                                    value={padelSession.title}
                                     className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full text-black sm:text-sm border-gray-300 rounded-md"
                                 />
                             </div>
@@ -67,7 +65,7 @@ function CreateEvent() {
                                     name="date"
                                     id="date"
                                     onChange={handleChange}
-                                    value={formData.date}
+                                    value={padelSession.date}
                                     className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full text-black sm:text-sm border-gray-300 rounded-md"
                                 />
                             </div>
@@ -86,7 +84,7 @@ function CreateEvent() {
                                     name="time"
                                     id="time"
                                     onChange={handleChange}
-                                    value={formData.time}
+                                    value={padelSession.time}
                                     className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full text-black sm:text-sm border-gray-300 rounded-md"
                                 />
                             </div>
@@ -104,7 +102,7 @@ function CreateEvent() {
                                     name="place"
                                     id="place"
                                     onChange={handleChange}
-                                    value={formData.place}
+                                    value={padelSession.place}
                                     className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full text-black sm:text-sm border-gray-300 rounded-md"
                                 >
                                     <option value="">Select a Place</option>
@@ -125,7 +123,7 @@ function CreateEvent() {
                                     name="court"
                                     id="court"
                                     onChange={handleChange}
-                                    value={formData.court}
+                                    value={padelSession.court}
                                     className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full text-black sm:text-sm border-gray-300 rounded-md"
                                 >
                                     <option value="">Select a Court</option>
@@ -152,7 +150,7 @@ function CreateEvent() {
                                     name="people"
                                     id="people"
                                     onChange={handleChange}
-                                    value={formData.people}
+                                    value={padelSession.people}
                                     className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full  text-black sm:text-sm border-gray-300 rounded-md"
                                 />
                             </div>
@@ -161,7 +159,7 @@ function CreateEvent() {
                         <div className="flex items-center justify-between">
                             <button
                                 type="submit"
-                                className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                                className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-700"
                             >
                                 Create Event
                             </button>
