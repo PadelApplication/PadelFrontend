@@ -17,7 +17,6 @@ function EventList({ token }) {
             setEvents(updatedEvents);
         } else {
             // Handle not logged in
-            console.log("User is not logged in. Please log in to join events.");
         }
     };
 
@@ -33,7 +32,6 @@ function EventList({ token }) {
             setEvents(updatedEvents);
         } else {
             // Handle not logged in
-            console.log("User is not logged in. Please log in to leave events.");
         }
     };
 
